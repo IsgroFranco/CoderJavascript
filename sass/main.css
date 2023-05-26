@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.topbar {
+  background-color: #353738;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  font-weight: 600;
+  gap: 16px;
+}
+
+.main {
+  display: flex;
+}
+
+.wrapp-wrapper {
+  min-height: 1000px;
+}
+
+.ecommerce-header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding: 2rem;
+}
+
+.ecommerce-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ecommerce-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ecomemrce-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  list-style: none;
+  gap: 1rem;
+}
+
+.carrito-link {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.carrito-link a {
+  text-decoration: none;
+}
+
+.carrito-link i {
+  color: #353738;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.carrito-link li {
+  position: relative;
+  margin-right: 4rem;
+}
+
+.carrito-link span {
+  position: absolute;
+  text-decoration: none;
+  background-color: #353738;
+  color: #ffffff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-weight: 600;
+  text-align: center;
+  font-size: 14px;
+}
+
+.background-img {
+  background-image: url(../assets/BannerSHOP-scaled.jpg);
+  background-position: center;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.main-title {
+  letter-spacing: 4px;
+  font-size: 3.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+aside {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  min-width: 250px;
+}
+
+.aside-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  list-style: none;
+}
+
+.boton-categoria {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  gap: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.boton-carrito {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+  cursor: pointer;
+}
+.boton-carrito i {
+  color: #000;
+}
+.boton-carrito .numerito {
+  font-size: 14px;
+  color: #ffffff;
+  width: 20px;
+  height: 20px;
+  border-radius: 40%;
+  background-color: #000;
+  text-align: center;
+}
+
+.bi.bi-hand-index-fill {
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.bi.bi-hand-index-fill.active {
+  opacity: 1;
+}
+
+.wrapper-products {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex: 1;
+  gap: 32px 56px;
+}
+
+.ecommerce-products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 250px;
+  max-width: 250px;
+  height: 350px;
+  max-height: 500px;
+  align-self: center;
+  justify-self: center;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.products-img-container {
+  width: 200px;
+  height: 200px;
+}
+
+.products-img-container img {
+  width: 100%;
+}
+
+.agregar-carrito {
+  background-color: rgb(66, 65, 65);
+  padding: 10px;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.shopping-cart {
+  background-color: #e4e5e7;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.shopping-cart a {
+  text-decoration: none;
+  color: #23232c;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 2rem;
+}
+
+.product-cart-img {
+  width: 100px;
+  height: 100px;
+}
+.product-cart-img img {
+  width: 100%;
+}
+
+.section-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 9rem;
+}
+
+.cart-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  align-items: center;
+  font-weight: 600;
+}
+
+.cart-wrapper > * {
+  margin-right: 100px;
+}
+
+.cart-wrapper > *:last-child {
+  margin-right: 0;
+}
+
+.product-cart-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}/*# sourceMappingURL=main.css.map */

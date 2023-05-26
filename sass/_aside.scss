@@ -1,0 +1,55 @@
+aside {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  min-width: 250px;
+}
+
+.aside-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  list-style: none;
+}
+
+.boton-categoria {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  gap: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.boton-carrito {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+  cursor: pointer;
+  i {
+    color: #000;
+  }
+  .numerito {
+    font-size: 14px;
+    color: #ffffff;
+    width: 20px;
+    height: 20px;
+    border-radius: 40%;
+    background-color: #000;
+    text-align: center;
+  }
+}
+
+.bi.bi-hand-index-fill {
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.bi.bi-hand-index-fill.active {
+  opacity: 1;
+}

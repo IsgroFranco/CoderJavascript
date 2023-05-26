@@ -1,0 +1,44 @@
+.wrapper-products {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex: 1;
+  gap: 32px 56px;
+}
+
+.ecommerce-products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 250px;
+  max-width: 250px;
+  height: 350px;
+  max-height: 500px;
+  align-self: center;
+  justify-self: center;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.products-img-container {
+  width: 200px;
+  height: 200px;
+}
+
+.products-img-container img {
+  width: 100%;
+}
+
+.agregar-carrito {
+  background-color: rgb(66, 65, 65);
+  padding: 10px;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 8px;
+}

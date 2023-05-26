@@ -1,0 +1,62 @@
+@use "./variables" as var;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ecommerce-header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding: 2rem;
+}
+
+.ecommerce-nav {
+  @include flex-center;
+}
+
+.ecommerce-logo {
+  @include flex-center;
+}
+
+.ecomemrce-links {
+  @include flex-center;
+  flex-direction: row;
+  list-style: none;
+  gap: 1rem;
+}
+
+.carrito-link {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+.carrito-link a {
+  text-decoration: none;
+}
+
+.carrito-link i {
+  color: var.$secondary-color;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.carrito-link li {
+  position: relative;
+  margin-right: 4rem;
+}
+
+.carrito-link span {
+  position: absolute;
+  text-decoration: none;
+  background-color: var.$secondary-color;
+  color: var.$white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-weight: 600;
+  text-align: center;
+  font-size: 14px;
+}
