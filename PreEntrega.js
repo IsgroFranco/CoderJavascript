@@ -72,54 +72,61 @@ function cargarProductos(productosElegidos) {
     const article = document.createElement("article");
     article.classList.add("ecommerce-products");
     article.innerHTML = `
-    <div class="products-img-container">
-<img src="${producto.imagen}" alt="${producto.titulo}" />
-</div>
-<h3 class="product-title">${producto.titulo}</h3>
-<p class="product-price">$${producto.precio}</p>
-<button class="agregar-carrito" id="${producto.id}">Agregar carrito</button>`;
+        <div class="products-img-container">
+        <img src="${producto.imagen}" alt="${producto.titulo}" />
+        </div>
+        <h3 class="product-title">${producto.titulo}</h3>
+        <p class="product-price">$${producto.precio}</p>
+        <button class="agregar-carrito" id="${producto.id}">Agregar carrito</button>`;
 
     contenedorProductos.append(article);
   });
-  const botonesAgregarCarrito = document.querySelectorAll(".agregar-carrito");
-  const numeroCarrito = document.querySelectorAll(".numerito");
-  botonesAgregarCarrito.forEach((boton) => {
-    boton.addEventListener("click", () => {
-      numeroCarrito.forEach((numerito) => {
-        numerito.textContent = parseInt(numerito.textContent) + 1;
-      });
-    });
-  });
 }
 
-cargarProductos(productos);
+function loSentimos() {
+  contenedorProductos.innerHTML = "";
+  const article = document.createElement("article");
+  article.classList.add("ecommerce-products");
+  article.innerHTML =
+    "<h2>Lo sentimos, pero no cumples con los requisitos para ingresar a la tienda</h2>";
+  contenedorProductos.append(article);
+}
 
-botonCategoria.forEach((boton) => {
-  boton.addEventListener("click", () => {
-    const icon = boton.querySelector("i");
+let validacion1 = prompt("Usted es un robot ¿Si? ¿No?").toLowerCase();
+let validacion2 = prompt("Usted es mayor de 18 años ¿Si? ¿No?").toLowerCase();
+if (validacion1 === "no" && validacion2 === "si") {
+  alert("Bienvenido a Sneakers tienda");
+  cargarProductos(productos);
+} else if (validacion1 === "si" && validacion2 === "si") {
+  alert("Lo sentimos pero no se permiten robots en esta pagina");
+  loSentimos();
+} else if (validacion1 === "no" && validacion2 === "no") {
+  alert("Lo sentimos pero debes ser mayor a 1 años para poder comprar");
+  loSentimos();
+} else if (validacion1 === "si" && validacion2 === "no") {
+  alert(
+    "Al parecer eres un robot menor de edad por lo tanto no puedes acceder a este sitio"
+  );
+  loSentimos();
+} else {
+  alert("Algo a salido mal, vuelve a intentarlo mas tarde");
+  loSentimos();
+}
 
-    botonCategoria.forEach((otroBoton) => {
-      if (otroBoton !== boton) {
-        otroBoton.querySelector("i").classList.remove("active");
-      }
-    });
+let sneakerSelection = prompt(
+  "Que sneaker desea, Nike, Adidas o todos"
+).toLowerCase();
 
-    icon.classList.add("active");
-
-    if (boton.id !== "todos") {
-      const productosBoton = productos.filter(
-        (producto) => producto.categoria.id === boton.id
-      );
-      cargarProductos(productosBoton);
-    } else {
-      cargarProductos(productos);
-    }
-  });
-});
-
-const botonesAgregarCarrito = document.querySelectorAll(".agregar-carrito");
-botonesAgregarCarrito.forEach((boton) => {
-  boton.addEventListener("click", () => {
-    numeroCarrito.textContent = parseInt(numeroCarrito.textContent) + 1;
-  });
-});
+if (sneakerSelection === "nike") {
+  const sneakersNike = productos.filter(
+    (producto) => producto.categoria.id === "nike"
+  );
+  cargarProductos(sneakersNike);
+} else if (sneakerSelection === "adidas") {
+  const sneakersAdidas = productos.filter(
+    (producto) => producto.categoria.id === "adidas"
+  );
+  cargarProductos(sneakersAdidas);
+} else if (sneakerSelection === "todos") {
+  cargarProductos(productosElegidos);
+}
