@@ -1,4 +1,4 @@
-aside {
+.aside-main {
   margin-top: 4rem;
   display: flex;
   flex-direction: column;
@@ -31,18 +31,6 @@ aside {
   color: #000000;
   font-weight: 600;
   cursor: pointer;
-  i {
-    color: #000;
-  }
-  .numerito {
-    font-size: 14px;
-    color: #ffffff;
-    width: 20px;
-    height: 20px;
-    border-radius: 40%;
-    background-color: #000;
-    text-align: center;
-  }
 }
 
 .bi.bi-hand-index-fill {
@@ -50,6 +38,17 @@ aside {
   opacity: 0;
 }
 
-.bi.bi-hand-index-fill.active {
+.active {
   opacity: 1;
+  border-bottom: 2px solid black;
+  border-radius: 2px;
+  height: 32px;
+  position: relative;
+  &::before {
+    content: "";
+    border-bottom: 2px solid black;
+    width: 100%;
+    position: absolute;
+    bottom: -6px;
+  }
 }
