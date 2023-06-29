@@ -1,3 +1,8 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 .shopping-cart {
   background-color: #e4e5e7;
   width: 100%;
@@ -22,9 +27,10 @@
 
 .section-cart {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 9rem;
+  margin-top: 4rem;
 }
 
 .cart-wrapper {
@@ -63,8 +69,21 @@
     color: rgb(51, 51, 51);
   }
 }
+.decrement-cart {
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  height: 24px;
+  width: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  &:hover {
+    color: rgb(51, 51, 51);
+  }
+}
 .product-name {
   height: 16px;
+  width: 200px;
 }
 
 .cart-trash {
@@ -72,4 +91,16 @@
   i:hover {
     color: rgb(121, 42, 42);
   }
+}
+
+.buy-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.buy {
+  text-align: center;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
 }

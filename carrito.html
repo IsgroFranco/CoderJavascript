@@ -4,7 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carrito</title>
+    <title>Sneaker Tienda</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/adidas-ADI2000-Yu-Gi-Oh-Yugi_s-World-with-Sealed-Dark-Magician-Promo-Card-433x433 (1).jpg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
@@ -50,45 +60,16 @@
     <div class="shopping-cart">
       <a href="#">Shopping cart</a>
     </div>
-    <section class="section-cart">
-      <article class="cart-wrapper">
-        <div class="product-cart-img">
-          <img
-            src="../assets/adidas-Forum-Buckle-Low-Bad-Bunny-Blue-Tint.jpg"
-            alt=""
-          />
-        </div>
+    <section class="section-cart"></section>
+    <div class="buy-wrapper">
+      <button class="buy">COMPRAR</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
 
-        <div class="cart-info-wrapp">
-          <span class="product-cart-info">PRODUCTO</span>
-          <span class="product-name">Adidas Forum Buckle Low</span>
-        </div>
-
-        <div class="cart-info-wrapp">
-          <span class="product-cart-info">PRECIO</span>
-          <div class="product-cart-price">
-            <span class="product-name">$685.00</span>
-          </div>
-        </div>
-        <div class="cart-info-wrapp">
-          <span class="product-cart-info">CANTIDAD</span>
-          <div class="product-cart-quantity">
-            <button class="increment-cart">-</button>
-            <span>0</span>
-            <button class="increment-cart">+</button>
-          </div>
-        </div>
-        <div class="cart-info-wrapp">
-          <span class="product-cart-info">SUBTOTAL</span>
-          <div class="product-cart-subtotal">
-            <span class="product-name">$685</span>
-          </div>
-        </div>
-        <div class="cart-trash">
-          <i class="bi bi-trash"></i>
-        </div>
-      </article>
-    </section>
-    <script src="../app.js"></script>
+    <script src="../carrito.js"></script>
   </body>
 </html>
