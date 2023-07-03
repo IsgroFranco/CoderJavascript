@@ -31,6 +31,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .cart-wrapper {
@@ -103,4 +104,20 @@ body {
   width: 100px;
   height: 50px;
   cursor: pointer;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-weight: 600;
+}
+
+.carrito-vacio {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 16px;
+}
+
+.cart-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }

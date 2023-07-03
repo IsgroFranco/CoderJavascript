@@ -59,6 +59,7 @@ function cargarProductosCarrito() {
   } else {
     sectionCart.innerHTML = "";
     const span = document.createElement("span");
+    span.classList.add("carrito-vacio");
     span.innerHTML = "Tu carrito esta vacio";
     sectionCart.append(span);
   }
@@ -120,6 +121,8 @@ function decrementCart(idProducto) {
         },
         onClick: function () {}, // Callback after click
       }).showToast();
+
+      compraFinalizada();
     }
 
     localStorage.setItem("carrito", JSON.stringify(productosEnCarrito));
