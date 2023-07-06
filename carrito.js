@@ -63,6 +63,9 @@ function cargarProductosCarrito() {
     const span = document.createElement("span");
     span.classList.add("carrito-vacio");
     span.innerHTML = "Tu carrito esta vacio 😔";
+    const cartContainer = document.querySelector(".cart-container");
+    cartContainer.style.justifyContent = "center";
+    cartContainer.style.alignItems = "flex-start";
     sectionCart.append(span);
   }
   actualizarNumerito();
@@ -144,9 +147,11 @@ function incrementCart(idProducto) {
   }
 }
 
+const buyButton = document.querySelector(".buy");
+
 function compraFinalizada() {
-  const buyButton = document.querySelector(".buy");
   if (productosEnCarrito.length > 0) {
+    buyButton.classList.add("open");
     buyButton.addEventListener("click", () => {
       Swal.fire({
         position: "center",
@@ -156,7 +161,8 @@ function compraFinalizada() {
         timer: 1000,
       });
       limpiarCarrito();
-      botonVaciarCarrito.disabled = true;
+      buyButton.classList.remove("open");
+      botonVaciarCarrito.classList.remove("open");
     });
   } else {
     buyButton.addEventListener("click", () => {
@@ -181,9 +187,10 @@ const botonVaciarCarrito = document.querySelector(".empty-cart");
 
 function vaciarCarrito() {
   if (productosEnCarrito && productosEnCarrito.length > 0) {
+    botonVaciarCarrito.classList.add("open");
     botonVaciarCarrito.addEventListener("click", () => {
       Swal.fire({
-        title: "Esas seguro?",
+        title: "Estas seguro?",
         text: "Estas a punto de borrar todos los productos del carrito!",
         icon: "warning",
         showCancelButton: true,
@@ -198,7 +205,8 @@ function vaciarCarrito() {
             "success"
           );
           limpiarCarrito();
-          botonVaciarCarrito.disabled = true;
+          botonVaciarCarrito.classList.remove("open");
+          buyButton.classList.remove("open");
         }
       });
     });

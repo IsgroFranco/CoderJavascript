@@ -42,8 +42,6 @@ function cargarProductos(productosElegidos) {
   actualizarBotonesAgregar();
 }
 
-cargarProductos(productos);
-
 botonCategoria.forEach((boton) => {
   if (boton === botonCategoriaInicial) {
     boton.classList.add("active");
@@ -85,15 +83,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const productosEnLs = JSON.parse(localStorage.getItem("carrito"));
   if (productosEnLs) {
     productosEnCarrito = productosEnLs;
+
     actualizarCarrito();
     actualizarNumerito();
   }
 });
 
 function agragarAlCarrito(e) {
+  const alerts = [
+    "Ufff, maravillosa elección 🔥",
+    "Genial, esas son buenisimas 😍",
+    "Perfectas para ser infiel 🤟",
+  ];
+
   Toastify({
-    text: "Producto agregado!",
-    duration: 2000,
+    text: alerts[Math.floor(Math.random() * alerts.length)],
+    duration: 1500,
     close: true,
     gravity: "top", // `top` or `bottom`
     position: "right", // `left`, `center` or `right`

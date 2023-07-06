@@ -39,6 +39,7 @@ body {
   align-items: center;
   font-weight: 600;
   gap: 64px;
+  padding: 16px;
 }
 
 .cart-info-wrapp {
@@ -73,7 +74,6 @@ body {
 }
 
 .product-name {
-  height: 16px;
   width: 200px;
 }
 
@@ -101,11 +101,12 @@ body {
   background-color: rgb(0, 0, 0);
   color: white;
   font-weight: 600;
+  display: none;
 }
 
 .carrito-vacio {
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 700;
   padding: 16px;
 }
 
@@ -113,4 +114,9 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  min-height: 100vh;
+}
+
+.open {
+  display: block;
 }
