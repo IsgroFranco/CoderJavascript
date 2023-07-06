@@ -9,6 +9,11 @@ body {
   position: relative;
 }
 
+a {
+  text-decoration: none;
+  color: unset;
+}
+
 .topbar {
   background-color: #353738;
   color: #ffffff;
@@ -26,6 +31,15 @@ body {
 
 .wrapp-wrapper {
   min-height: 1000px;
+}
+
+footer {
+  height: 50px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  font-weight: 600;
 }
 
 .button-sticky {
@@ -326,6 +340,7 @@ body {
   flex-wrap: wrap;
   flex: 1;
   gap: 32px 56px;
+  margin-bottom: 64px;
 }
 
 .ecommerce-products {
@@ -335,8 +350,6 @@ body {
   flex-direction: column;
   width: 250px;
   max-width: 250px;
-  height: 350px;
-  max-height: 500px;
   align-self: center;
   justify-self: center;
   background-color: #fff;
@@ -355,14 +368,19 @@ body {
 }
 
 .agregar-carrito {
-  background-color: rgb(66, 65, 65);
+  background-color: rgb(0, 0, 0);
   padding: 10px;
   border: none;
   color: white;
-  border-radius: 10px;
   font-size: 16px;
   cursor: pointer;
   margin-top: 8px;
+}
+
+.products-wrapp {
+  display: flex;
+  flex-direction: column;
+  height: 360px;
 }
 
 body {
@@ -425,19 +443,7 @@ body {
   text-align: center;
 }
 
-.increment-cart {
-  border: none;
-  font-size: 20px;
-  font-weight: 600;
-  height: 24px;
-  width: 16px;
-  line-height: 24px;
-  cursor: pointer;
-}
-.increment-cart:hover {
-  color: rgb(51, 51, 51);
-}
-
+.increment-cart,
 .decrement-cart {
   border: none;
   font-size: 20px;
@@ -447,6 +453,7 @@ body {
   line-height: 24px;
   cursor: pointer;
 }
+.increment-cart:hover,
 .decrement-cart:hover {
   color: rgb(51, 51, 51);
 }
@@ -466,9 +473,12 @@ body {
 .buy-wrapper {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.buy {
+.buy,
+.empty-cart {
   text-align: center;
   width: 100px;
   height: 50px;

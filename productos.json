@@ -58,5 +58,65 @@
       "id": "nike"
     },
     "precio": 700
+  },
+  {
+    "id": "nike-dunk-low-industrial-blue-sashiko",
+    "titulo": "Nike Dunk Low Industrial Blue Sashiko (Nordelta)",
+    "imagen": "./assets/Nike-Dunk-Low-Industrial-Blue-Sashiko.jpg",
+    "categoria": {
+      "nombre": "nike",
+      "id": "nike"
+    },
+    "precio": 900
+  },
+  {
+    "id": "jordan-1-low-sunset-haze",
+    "titulo": "Jordan 1 Low Sunset Haze (W) (Belgrano)",
+    "imagen": "./assets/Jordan-1-Low-Sunset-Haze-Women_s.jpg",
+    "categoria": {
+      "nombre": "nike",
+      "id": "nike"
+    },
+    "precio": 587
+  },
+  {
+    "id": "adidas-campus-light-bad-bunny-cream",
+    "titulo": "Adidas Campus Light Bad Bunny Cream (Belgrano)",
+    "imagen": "./assets/adidas-Campus-Light-Bad-Bunny-Cream.jpg",
+    "categoria": {
+      "nombre": "adidas",
+      "id": "adidas"
+    },
+    "precio": 587
+  },
+  {
+    "id": "adidas-yeezy-boost-700-wave-runner",
+    "titulo": "Adidas Yeezy Boost 700 Wave Runner (Nordelta)",
+    "imagen": "./assets/adidas-Yeezy-Boost-700-Wave-Runner-Solid-Grey.jpg",
+    "categoria": {
+      "nombre": "adidas",
+      "id": "adidas"
+    },
+    "precio": 460
+  },
+  {
+    "id": "adidas-nmd-hu-pharrell-billionaire-boys-club-astronaut-blue",
+    "titulo": "Adidas NMD Hu Pharrell x Billionaire Boys Club Astronaut Blue (Belgrano)",
+    "imagen": "./assets/adidas-NMD-Hu-Pharrell-x-Billionaire-Boys-Club-Astronaut-Blue.jpg",
+    "categoria": {
+      "nombre": "adidas",
+      "id": "adidas"
+    },
+    "precio": 765
+  },
+  {
+    "id": "adidas-campus-light-bad-bunny-wild-moss",
+    "titulo": "Adidas Campus Light Bad Bunny Wild Moss (Belgrano)",
+    "imagen": "./assets/adidas-Campus-Light-Bad-Bunny-Wild-Moss.jpg",
+    "categoria": {
+      "nombre": "adidas",
+      "id": "adidas"
+    },
+    "precio": 765
   }
 ]

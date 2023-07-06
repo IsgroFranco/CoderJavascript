@@ -24,12 +24,17 @@ function cargarProductos(productosElegidos) {
     const article = document.createElement("article");
     article.classList.add("ecommerce-products");
     article.innerHTML = `
+    <div class="products-wrapp"> 
     <div class="products-img-container">
 <img src="${producto.imagen}" alt="${producto.titulo}" />
 </div>
 <h3 class="product-title">${producto.titulo}</h3>
 <p class="product-price">$${producto.precio}</p>
-<button class="agregar-carrito" id="${producto.id}">Agregar carrito</button>`;
+</div>
+<div class="agregar-al-carrito-wrapper">
+<button class="agregar-carrito" id="${producto.id}">Agregar carrito</button>
+</div>
+`;
 
     contenedorProductos.append(article);
   });

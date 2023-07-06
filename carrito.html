@@ -30,10 +30,10 @@
       <div class="ecommerce-header">
         <nav class="ecommerce-nav">
           <ul class="ecomemrce-links">
-            <li class="ecommerce-links-item">MARCAS</li>
-            <li class="ecommerce-links-item">CATEGORIAS</li>
-            <li class="ecommerce-links-item">NOSOTROS</li>
-            <li class="ecommerce-links-item">CONTACTO</li>
+            <a href="#"> <li class="ecommerce-links-item">MARCAS</li></a>
+            <a href="#"> <li class="ecommerce-links-item">CATEGORIA</li></a>
+            <a href="#"> <li class="ecommerce-links-item">NOSOTROS</li></a>
+            <a href="#"> <li class="ecommerce-links-item">CONTACTO</li></a>
           </ul>
         </nav>
         <a href="./index.html">
@@ -50,7 +50,7 @@
             <li>
               <a href="">
                 <i class="bi bi-cart"></i>
-                <span class="count cart-count numerito">0</span>
+                <span id="numerito" class="count cart-count numerito">0</span>
               </a>
             </li>
           </ul>
@@ -59,11 +59,14 @@
     </header>
     <div class="shopping-cart">
       <a href="#">Shopping cart</a>
+      <a href="./index.html">Seguir comprando</a>
     </div>
     <div class="cart-container">
       <section class="section-cart"></section>
-      <div class="buy-wrapper"></div>
-      <button class="buy">COMPRAR</button>
+      <div class="buy-wrapper">
+        <button class="buy">COMPRAR</button>
+        <button class="empty-cart">VACIAR CARRITO</button>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script

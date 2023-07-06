@@ -58,18 +58,7 @@ body {
   text-align: center;
 }
 
-.increment-cart {
-  border: none;
-  font-size: 20px;
-  font-weight: 600;
-  height: 24px;
-  width: 16px;
-  line-height: 24px;
-  cursor: pointer;
-  &:hover {
-    color: rgb(51, 51, 51);
-  }
-}
+.increment-cart,
 .decrement-cart {
   border: none;
   font-size: 20px;
@@ -82,6 +71,7 @@ body {
     color: rgb(51, 51, 51);
   }
 }
+
 .product-name {
   height: 16px;
   width: 200px;
@@ -97,9 +87,12 @@ body {
 .buy-wrapper {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.buy {
+.buy,
+.empty-cart {
   text-align: center;
   width: 100px;
   height: 50px;

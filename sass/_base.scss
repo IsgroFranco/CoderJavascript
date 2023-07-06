@@ -11,6 +11,11 @@ body {
   position: relative;
 }
 
+a {
+  text-decoration: none;
+  color: unset;
+}
+
 .topbar {
   background-color: var.$secondary-color;
   color: var.$white;
@@ -28,4 +33,13 @@ body {
 
 .wrapp-wrapper {
   min-height: 1000px;
+}
+
+footer {
+  height: 50px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  font-weight: 600;
 }
