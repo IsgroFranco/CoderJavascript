@@ -103,6 +103,10 @@ function eliminarCarrito(e) {
   cargarProductosCarrito();
   localStorage.setItem("carrito", JSON.stringify(productosEnCarrito));
 
+  if (productosEnCarrito.length <= 0) {
+    buyButton.classList.remove("open");
+    botonVaciarCarrito.classList.remove("open");
+  }
   compraFinalizada();
   actualizarNumerito();
 }
@@ -128,6 +132,9 @@ function decrementCart(idProducto) {
           onClick: function () {}, // Callback after click
         }).showToast(),
         compraFinalizada());
+
+    buyButton.classList.remove("open");
+    botonVaciarCarrito.classList.remove("open");
 
     localStorage.setItem("carrito", JSON.stringify(productosEnCarrito));
     cargarProductosCarrito();
