@@ -64,10 +64,25 @@ botonCategoria.forEach((boton) => {
   });
 });
 
-carritoBoton.addEventListener("click", () => {
-  carritoAside.classList.toggle("hidden");
-  carritoAsideInfo.classList.toggle("hidden");
-});
+let productosEnCarrito = [];
+
+function buttonStickyCart() {
+  carritoBoton.addEventListener("click", () => {
+    if (productosEnCarrito.length > 0) {
+      carritoAside.classList.toggle("hidden");
+      carritoAsideInfo.classList.toggle("hidden");
+    }
+  });
+}
+
+function cerrarButtonSticky() {
+  if (productosEnCarrito <= 0) {
+    carritoAside.classList.remove("hidden");
+    carritoAsideInfo.classList.remove("hidden");
+  }
+}
+
+buttonStickyCart();
 
 function actualizarBotonesAgregar() {
   botonesAgregarCarrito = document.querySelectorAll(".agregar-carrito");
@@ -76,8 +91,6 @@ function actualizarBotonesAgregar() {
     boton.addEventListener("click", agragarAlCarrito);
   });
 }
-
-let productosEnCarrito = [];
 
 document.addEventListener("DOMContentLoaded", () => {
   const productosEnLs = JSON.parse(localStorage.getItem("carrito"));
@@ -131,6 +144,10 @@ function agragarAlCarrito(e) {
 function actualizarCarrito() {
   asideCarrito.innerHTML = "";
 
+  const botonIrAlCarrito = document.createElement("div");
+  botonIrAlCarrito.classList.add("boton-ir-carrito-wrapper");
+  botonIrAlCarrito.innerHTML = `<a class="boton-ir-carrito" href="./carrito.html">Ir al carrito</a>`;
+
   productosEnCarrito.forEach((producto) => {
     const asideSectionCart = document.createElement("section");
     asideSectionCart.classList.add("aside-section-cart");
@@ -182,6 +199,7 @@ function actualizarCarrito() {
     );
 
     asideCarrito.append(asideSectionCart);
+    asideCarrito.append(botonIrAlCarrito);
   });
 }
 
@@ -203,6 +221,7 @@ function eliminarDelCarrito(idProducto) {
   localStorage.setItem("carrito", JSON.stringify(productosEnCarrito));
   actualizarCarrito();
   actualizarNumerito();
+  cerrarButtonSticky();
 }
 
 function incrementarCantidad(idProducto) {
@@ -230,5 +249,6 @@ function decrementarCantidad(idProducto) {
     localStorage.setItem("carrito", JSON.stringify(productosEnCarrito));
     actualizarCarrito();
     actualizarNumerito();
+    cerrarButtonSticky();
   }
 }

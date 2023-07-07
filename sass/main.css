@@ -200,6 +200,20 @@ footer {
   color: rgb(121, 42, 42);
 }
 
+.boton-ir-carrito-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.boton-ir-carrito {
+  background-color: #000000;
+  color: white;
+  padding: 8px;
+  margin: 16;
+}
+
 .ecommerce-header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
